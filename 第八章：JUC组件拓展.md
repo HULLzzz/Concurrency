@@ -49,8 +49,8 @@ ArrayBlockingQueue和LinkedBlockingQueue的区别：
   ArrayBlockingQueue实现的队列中必须指定队列的大小；LinkedBlockingQueue实现的队列中可以不指定队列的大小，但是默认是Integer.MAX_VALUE
 
 ## 内部方法解析
-* put take 方法
+* put take 方法  
 生产者将信息发送至队列中（put），直到达到队列的上限值，达到上限值后队列被阻塞，负责消费的线程在队列中消费对象，直到队列为空，队列为空的时候消费线程阻塞。take: 获取并移除此队列的头部，在元素变得可用之前一直等待 。queue的长度 == 0 的时候，一直阻塞。
-* offer
+* offer  
 offer: 将指定元素插入此队列中（如果立即可行且不会违反容量限制），成功时返回 true，如果当前没有可用的空间，则返回 false，不会抛异常。
 
